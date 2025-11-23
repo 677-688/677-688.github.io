@@ -18,7 +18,7 @@ export default defineConfig({
     lang: 'en-US',
     // 默认值： /,计划在子路径部署就需要改这个为子路径目录,始终以 / 开头和结尾
     // base: "/",
-    base: "677blog",
+    base: "/677blog/",
     /**
      * 路由
      */
