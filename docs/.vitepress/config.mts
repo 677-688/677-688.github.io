@@ -19,7 +19,7 @@ const vitePressOptions = {
     description: " 677 的知识库",
     // 设置要在页面 HTML 的 <head> 标签中呈现的其他元素,用户添加的标签在结束 head 标签之前呈现，在 VitePress 标签之后。
     // 当前添加了 ico 显示
-    head: [['link', {rel: 'icon', href: './icon/cat1.ico'}]],
+    head: [['link', {rel: 'icon', href: 'icon/cat1.ico'}]],
     // 站点的 lang 属性。这将呈现为页面 HTML 中的 <html lang="en-US"> 标签。
     lang: 'en-US',
     // 默认值： /,计划在子路径部署就需要改这个为子路径目录,始终以 / 开头和结尾
@@ -72,7 +72,7 @@ const vitePressOptions = {
          * 导航栏上显示的 Logo，位于站点标题前。
          * 可以接受一个路径字符串，或者一个对象来设置在浅色/深色模式下不同的 Logo。
          */
-        logo: {light: "./icon/cat1.ico", dark: "./icon/cat2.ico"},
+        logo: {light: "icon/cat1.ico", dark: "icon/cat2.ico"},
         /**
          * 可以自定义此项以替换导航中的默认站点标题 (应用配置中的 title)。
          * 当设置为 false 时，导航中的标题将被禁用。这在当 logo 已经包含站点标题文本时很有用。
@@ -159,7 +159,7 @@ const vitePressOptions = {
         footer: {
             // 版权前显示的信息
             message: `
-<!--                <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px;">-->
+                <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px;">
 <!--                  <span>基于 VitePress 构建</span>-->
 <!--                  <span>•</span>-->
 <!--                  <a href="/sitemap.xml" style="display: inline-flex; align-items: center;">网站地图</a>-->
@@ -167,10 +167,19 @@ const vitePressOptions = {
 <!--                  <a href="/feed.xml" style="display: inline-flex; align-items: center;">RSS 订阅</a>-->
 <!--                  <span>•</span>-->
 <!--                  <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备12345678号</a>-->
-<!--                </div>-->
+
+                        <span class="text">
+                        总访问量 <span id="busuanzi_value_site_pv" class="font-bold">--</span> 次
+                        </span>
+                        <img src="heart.gif" alt="heart" width="10" height="10" />
+                        <span class="text">
+                        访客数 <span id="busuanzi_value_site_uv" class="font-bold">--</span> 人次
+                        </span>
+                  <DataPanel />
+                </div>
               `,
             // 实际的版权文本
-            copyright: `Copyright © 2025 677. All Rights Reserved. <UpdateTime />`
+            copyright: `Copyright © 2025 677. All Rights Reserved.`
         },
 
         /**
@@ -188,7 +197,7 @@ const vitePressOptions = {
          * 类型：LastUpdatedOptions
          */
         lastUpdated: {
-            text: '最后更新于: ',
+            text: '最后更新于',
             formatOptions: {
                 dateStyle: 'short', //full
                 timeStyle: 'short' //medium
@@ -352,6 +361,8 @@ export default defineConfig({
         plugins: [
             //侧边栏生成配置
             Sidebar({
+                path: "/",
+                scannerRootMd: true,
                 //侧边栏生成规则
                 // 当 resolveRule 为 filePath，则按照本地文件路径生成侧边栏
                 // 当 resolveRule 为 rewrites，则按照 rewrites 结果生成侧边栏

@@ -1,0 +1,29 @@
+/*首次加载的动画效果*/
+.VPDoc .VPDocAsideOutline, .VPDoc .vp-doc > div, .VPSidebar .group {
+    animation: fade-up-slide .7s ease-out forwards
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fade-up-slide {
+    0% {
+        opacity: 0;
+        transform: translateY(40px)
+    }
+    30% {
+        animation-timing-function: ease-out
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}

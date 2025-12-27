@@ -1,10 +1,16 @@
-/* .vitepress\theme\style\hidden.css */
+/* .vitepress\theme\style\doc-hidden.css */
 :root {
 
     /* 文档页Logo出文字下横条 */
     @media (min-width: 960px) {
         .VPNavBarTitle.has-sidebar .title {
             border-bottom-color: transparent;
+        }
+
+        /* 文档页导航中间透明 */
+        .VPNavBar:not(.home.top) .content-body {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(10px);
         }
     }
 
@@ -28,9 +34,11 @@
         border-bottom: none;
     }
 
-    /* 手机端大纲栏横条隐藏 */
+    /* 手机端大纲栏横条隐藏 大纲栏透明*/
     .VPLocalNav {
         border-bottom: none;
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
     }
 
 }

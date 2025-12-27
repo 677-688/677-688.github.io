@@ -10,23 +10,23 @@ import type {DefaultTheme} from 'vitepress'
  * noIcon 如果不喜欢外部链接，有个箭头↗ 图标，可以选择关闭
  */
 export const nav: DefaultTheme.Config['nav'] = [
-    {text: '首页', link: '/'},
-    {
-        text: 'vitepress',
-        activeMatch: "/vitepress/",
-        items: [
-            {text: 'vitepress使用', link: '/vitepress/vitepress使用'},
-            {text: 'markdown语法扩展', link: '/vitepress/markdown语法扩展'},
-            {text: 'frontmatter说明', link: '/vitepress/frontmatter说明'}
-        ]
-    },
-    {
-        text: 'markdown',
-        activeMatch: "/markdown/",
-        items: [
-            {text: 'markdown语法', link: '/markdown/markdown语法'},
-        ]
-    },
+    // {text: '首页', link: '/'},
+    // {
+    //     text: 'vitepress',
+    //     activeMatch: "/vitepress/",
+    //     items: [
+    //         {text: 'vitepress使用', link: '/vitepress/vitepress使用'},
+    //         {text: 'markdown语法扩展', link: '/vitepress/markdown语法扩展'},
+    //         {text: 'frontmatter说明', link: '/vitepress/frontmatter说明'}
+    //     ]
+    // },
+    // {
+    //     text: 'markdown',
+    //     activeMatch: "/markdown/",
+    //     items: [
+    //         {text: 'markdown语法', link: '/markdown/markdown语法'},
+    //     ]
+    // },
 ]
 
 

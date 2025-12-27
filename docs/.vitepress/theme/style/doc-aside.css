@@ -1,0 +1,19 @@
+/* 文档页侧边栏 */
+.VPDoc .aside .aside-container .outline-link {
+    transition: transform 0.3s ease-out;
+}
+
+.VPDoc .aside .aside-container .outline-link:hover {
+    transform: translate(4px);
+    color: var(--vp-c-brand-1)
+}
+
+.VPDoc .aside .aside-container .outline-link.active {
+    color: var(--vp-c-brand-3)
+}
+
+/* 文档页侧边栏顶部透明 */
+.curtain {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+}

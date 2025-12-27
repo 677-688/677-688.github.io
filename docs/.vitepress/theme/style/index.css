@@ -1,15 +1,26 @@
 /* index.css */
 @import './var.css';
+
 /* 主页背景彩虹渐变 */
-@import './rainbow.css';
+@import 'home-rainbow.css';
 /* 导航栏毛玻璃 */
-@import './blur.css';
+@import 'home-blur.css';
+
+/* 首次加载的动画效果 */
+@import 'doc-fade-up-animation.css';
 /* 隐藏横条 */
-@import './hidden.css';
-/* 代码块带标题 */
-@import './vp-code-title.css';
-/* 侧边栏样式美化 */
-@import './sidebarIcon.css';
+@import 'doc-hidden.css';
+/* 左侧边栏文字悬停和激活样式 */
+@import 'doc-sidebar.css';
+/* 右侧导航栏文字悬停和激活样式*/
+@import 'doc-aside.css';
+
+/* 代码块带标题样式 */
+@import 'doc-vp-code-title.css';
+/* 进度条样式*/
+@import 'nprogress-v2/dist/index.css';
+/* 引入时间线样式*/
+@import "vitepress-markdown-timeline/dist/theme/index.css";
 
 /* 图片缩放 */
 .medium-zoom-overlay {
@@ -17,7 +28,39 @@
 }
 
 .medium-zoom-image {
-    z-index: 9999 !important;/* 给的值是21，但是实测盖不住，直接999 */
+    z-index: 9999 !important; /* 给的值是21，但是实测盖不住，直接999 */
 }
 
 
+/* .H1标题颜色  渐变色
+    background: 采用了一个线性渐变
+    background-clip: 使文本的背景颜色与渐变效果相同
+    text-fill-color：将文字透明
+ */
+.VPDoc h1 {
+    background: -webkit-linear-gradient(10deg, #bd34fe 5%, #e43498 15%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 链接下划线隐藏 */
+.vp-doc a {
+    text-decoration: none;
+}
+
+/* 代码组中添加图片 */
+.rendered-md img {
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rendered-md {
+    display: none; /* 默认隐藏 */
+}
+
+.rendered-md.active {
+    display: block; /* 只有在 active 状态下才显示 */
+    max-width: 100%;
+}

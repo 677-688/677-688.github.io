@@ -1,0 +1,49 @@
+/* .vitepress\theme\style\home-blur.css */
+:root {
+
+    /* 首页下滑后导航透明 */
+    .VPNavBar:not(.has-sidebar):not(.home.top) {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+    }
+
+    /* 导航栏切换暗黑模式按钮样式调整 */
+    .Layout .VPNavBar .VPSwitchAppearance {
+        width: 22px !important;
+
+        .check {
+            transform: none;
+        }
+    }
+
+    /* 搜索框透明 */
+    .DocSearch-Button {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+    }
+
+    .VPHome {
+        margin-bottom: 0
+    }
+
+    /* Feature透明 */
+    .VPFeature {
+        border: 1px solid transparent;
+        box-shadow: 0 10px 30px 0 rgb(0 0 0 / 15%);
+        background-color: transparent;
+    }
+
+    /* 首页特性悬停效果 给首页特性VPFeature加一个hover效果，添加如下代码即可*/
+    /* VPFeatures 页卡悬浮效果 */
+    .VPFeatures .items .item {
+        transition: transform 0.3s;
+    }
+
+    .VPFeatures .items .item:hover {
+        transform: translateY(-5px);
+    }
+
+
+
+
+}

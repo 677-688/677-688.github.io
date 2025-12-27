@@ -59,4 +59,4 @@ export default {
 
 最后我们在markdown文件中，按格式使用即可
 
-<img src="../../public/小兰和柯南%20黑色背景%204K电脑壁纸3840x2400.jpg" alt="">
+<img src="/public/小兰和柯南%20黑色背景%204K电脑壁纸3840x2400.jpg" alt=""> 

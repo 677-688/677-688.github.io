@@ -1,3 +1,7 @@
+---
+title: 软件设计理论
+---
+
 ```mermaid
 graph LR
     A[Java 数据类型] --> B[原始数据类型]

@@ -1,0 +1,19 @@
+/* 侧边栏样式美化 */
+.VPSidebar .nav .item h3.text {
+    font-size: 14px;
+    font-weight: 900;
+    color: #1b1b1f;
+}
+
+.VPSidebar .nav .item p.text {
+    font-size: 14px;
+    transition: transform 0.3s ease-in-out
+}
+
+.VPSidebar .nav .item p.text:hover {
+    transform: translate(4px)
+}
+
+.VPSidebar .nav .VPSidebarItem.level-0 > .items {
+    padding-left: 5px
+}

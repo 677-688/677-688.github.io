@@ -21,8 +21,8 @@ hero:
     #| { src: string alt?: string }
     #| { light: string dark: string alt?: string }
     image: {
-        light: ./icon/cat1.ico,
-        dark: ./icon/cat2.ico
+        light: icon/cat1.ico,
+        dark: icon/cat2.ico
     }
 
     # 主页 hero 部分的操作按钮
@@ -34,10 +34,10 @@ hero:
     actions:
         -   theme: brand
             text: 软件设计理论
-            link: /软件设计理论/
-#        -   theme: alt
-#            text: API Examples
-#            link: /vitepress/vitepress使用
+            link: /markdown/软件设计理论/
+        -   theme: alt
+            text: 目录
+            link: /markdown/
 
 # 在 Features 部分，可以在 Hero 部分之后列出任意数量的 Feature
 # icon：在每个 feature 框中显示图标
@@ -58,37 +58,34 @@ hero:
 # rel：`link` 选项的链接 rel 属性
 # target：`link` 选项的链接 target 属性
 features:
-    -   icon: {
-        light: ./icon/cat1.ico,
-        dark: ./icon/cat2.ico
-    }
-        title: 学习
+    -   title: 学习
         details: 持续学习是成长的关键，通过不断记录和反思来提升自己
-    #        link: /vitepress/vitepress使用
-    -   icon: {
-        light: ./icon/cat1.ico,
-        dark: ./icon/cat2.ico
-    }
-        title: 实践
+        icon: {
+            light: icon/cat1.ico,
+            dark: icon/cat2.ico
+        }
+    -   title: 实践
         details: 通过动手实践来巩固理论知识，实战经验是最宝贵的财富
-    #        link: 
-    -   icon: {
-        light: ./icon/cat1.ico,
-        dark: ./icon/cat2.ico
-    }
-        title: 创新
+        icon: {
+            light: icon/cat1.ico,
+            dark: icon/cat2.ico
+        }
+    -   title: 创新
         details: 在学习和实践中不断创新，探索新的技术和方法
-    #        link: 
-    -   icon: {
-        light: ./icon/cat1.ico,
-        dark: ./icon/cat2.ico
-    }
-        title: 记录
+        icon: {
+            light: icon/cat1.ico,
+            dark: icon/cat2.ico
+        }
+    -   title: 记录
         details: 详细记录学习过程中的每一个步骤和心得，方便日后查阅和反思
-        link: /vitepress/vitepress使用
+        icon: {
+            light: icon/cat1.ico,
+            dark: icon/cat2.ico
+        }
 ---
-
-<!-- index.md -->
-<DataPanel />
-
+<!-- 标题下划线 -->
 <HomeUnderline />
+
+<!-- 浏览量 <DataPanel /> -->
+
+
