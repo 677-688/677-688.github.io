@@ -110,7 +110,7 @@ export const teekConfig = defineTeekConfig({
     // 文章默认的作者信息
     author: {
         name: "677", // 作者名称
-        link: "https://github.com/liuqiqi677688", // 点击作者名称后跳转的链接
+        link: "https://github.com/677-688", // 点击作者名称后跳转的链接
     },
     // 公告配置
     notice: {

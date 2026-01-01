@@ -107,7 +107,7 @@ export default defineConfig({
     },
     //站点地图配置
     sitemap: {
-        hostname: "https://liuqiqi677688.github.io/677blog/",
+        hostname: "https://677-688.github.io",
         transformItems: (items) => {
             const permalinkItemBak: typeof items = [];
             // 使用永久链接生成 sitemap
@@ -165,7 +165,7 @@ export default defineConfig({
         socialLinks: [
             {
                 icon: "github",
-                link: "https://github.com/liuqiqi677688",
+                link: "https://github.com/677-688",
             },
         ],
 
@@ -189,7 +189,7 @@ export default defineConfig({
         editLink: {
             text: "在 GitHub 上编辑此页",
             pattern:
-                "https://github.com/liuqiqi677688/677blog/blob/main/docs/:path",
+                "https://github.com/677-688/677-688.github.io/blob/main/docs/:path",
         },
 
         /**
