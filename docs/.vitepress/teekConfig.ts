@@ -126,11 +126,11 @@ export const teekConfig = defineTeekConfig({
         // ...
     },
     // 站点分析配置
-    siteAnalytics: [
-        {provider: "google", options: {id: "******"}},
-        {provider: "baidu", options: {id: "******"}},
-        {provider: "umami", options: {id: "******", src: "**"}},
-    ],
+    // siteAnalytics: [
+    //     {provider: "google", options: {id: "******"}},
+    //     {provider: "baidu", options: {id: "******"}},
+    //     {provider: "umami", options: {id: "******", src: "**"}},
+    // ],
     // 首页 Banner 配置，位于首页顶部
     banner: {
         enabled: true, // 是否启用 Banner
