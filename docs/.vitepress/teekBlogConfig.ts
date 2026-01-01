@@ -1,33 +1,11 @@
 import {defineTeekConfig} from "vitepress-theme-teek/config";
 
-export const coverImgList = [
-    "/imag/03.jpeg",
-    "/imag/212.jpg",
-    "/imag/217.jpg",
-    "/imag/20240419212650171353321047190.jpg",
-    "/imag/20240419222653171353681350056.jpg",
-    "/imag/20250615222500174999750097579.jpg",
-    "/imag/bizhihui_com_20231110231604169962936498366.jpg",
-    "/imag/bizhihui_com_20231111134439169968147988241.jpg",
-    "/imag/bizhihui_com_20231111173104169969506477847.jpg",
-    "/imag/bizhihui_com_20231111173104169969506477847 (1).jpg",
-    "/imag/Italy - Dolomities 4K.jpg",
-    "/imag/PUBG PC aesthetic wallpapers 4K.png",
-    "/imag/wallhaven-yqxzqx.jpg",
-    "/imag/全力以赴 蜡笔小新 4k电脑壁纸_彼岸图网.jpg",
-    "/imag/加油，继续高清，good luck.jpg",
-    "/imag/小兰和柯南 黑色背景 4K电脑壁纸3840x2400.jpg",
-    "/imag/懒羊羊.png",
-    "/imag/比他们都高清，Higher definition than them.jpg",
-    "/imag/高清唯美山水风景，High-definition and beautiful m.png"
-]
-
 export const teekConfig = defineTeekConfig({
     teekTheme: true, // 是否启用 Teek 主题
-    teekHome: true, // 是否启用 Teek 的首页风格（博客风格），如果为 false，则还原到 VitePress 的默认首页
-    vpHome: false, // 是否启用 VitePress 首页风格，支持 teekHome 和 vpHome 同时存在
+    teekHome: false, // 是否启用 Teek 的首页风格（博客风格），如果为 false，则还原到 VitePress 的默认首页
+    vpHome: true, // 是否启用 VitePress 首页风格，支持 teekHome 和 vpHome 同时存在
     loading: false, // 页面加载 Loading 动画配置，如果为 boolean，则控制是否启用，如果为字符串，则指定加载 Loading 动画的文案
-    homeCardListPosition: "left", // 首页卡片栏列表位置，当为 left 则在文章列表左侧，当为 right 则在文章列表右侧
+    homeCardListPosition: "right", // 首页卡片栏列表位置，当为 left 则在文章列表左侧，当为 right 则在文章列表右侧
     anchorScroll: true, // 是否启用锚点滚动功能，即阅读文章时，自动将 h1 ~ h6 标题添加到地址栏 # 后面
     // 深色、浅色模式切换时是否开启过渡动画
     viewTransition: {
@@ -61,11 +39,14 @@ export const teekConfig = defineTeekConfig({
     windowTransition: true, // 是否全局给部分元素启用视图渐入过渡效果，当为 boolean 类型，则控制全局是否启用，当为 object 类型，则控制部分元素是否启用
     // body 背景图片配置，将整个网站的背景色改为图片。
     bodyBgImg: {
-        imgSrc: coverImgList, // body 背景图片链接。单张图片 string | 多张图片 string[], 多张图片时每隔 imgInterval 秒换一张
+        imgSrc: [
+            // "/imag/bg1.png",
+            // "/imag/bg2.png"
+        ], // body 背景图片链接。单张图片 string | 多张图片 string[], 多张图片时每隔 imgInterval 秒换一张
         imgOpacity: 1, // body 背景图透明度，选值 0.1 ~ 1.0
         imgInterval: 15000, //  body 当多张背景图时（imgSrc 为数组），设置切换时间，单位：毫秒
         imgShuffle: true, // body 背景图是否随机切换，为 false 时按顺序切换
-        mask: true, // body 背景图遮罩
+        mask: false, // body 背景图遮罩
         maskBg: "rgba(0, 0, 0, 0.2)", // body 背景图遮罩颜色，如果为数字，则是 rgba(0, 0, 0, ${maskBg})，如果为字符串，则作为背景色。mask 为 true 时生效
     },
     // 主题增强配置，当开启后，右上角将有主题增强面板出现。
@@ -158,25 +139,25 @@ export const teekConfig = defineTeekConfig({
     },
     // 壁纸模式，在首页 最顶部 进入全屏后开启，仅当 banner.bgStyle = 'fullImg' 或 bodyBgImg.imgSrc 存在才生效。
     wallpaper: {
-        enabled: true, // 是否启用壁纸模式
+        enabled: false, // 是否启用壁纸模式
         hideBanner: true, // 开启壁纸模式后，是否隐藏 Banner
         hideMask: false, // 开启壁纸模式后，是否隐藏 Banner 或 bodyBgImage 的遮罩层，则确保 banner.mask 和 bodyBgImage.mask 为 true 才生效
     },
     // 文章配置
     post: {
-        postStyle: "card", // 文章列表风格
+        postStyle: "list", // 文章列表风格
+        excerptPosition: "top", // 文章摘要位置
         showMore: true, // 是否显示更多按钮
         moreLabel: "阅读全文 >", // 更多按钮文字
         emptyLabel: "暂无文章", // 文章列表为空时的标签
-        coverImgMode: "full", // 文章封面图模式
-        excerptPosition: "top", // 文章摘要位置
-        showCapture: true, // 是否在摘要位置显示文章部分文字，当为 true 且不使用 frontmatter.describe 和 <!-- more --> 时，会自动截取前 300 个字符作为摘要
-        splitSeparator: true, // 文章信息（作者、创建时间、分类、标签等信息）是否添加 | 分隔符
+        coverImgMode: "default", // 文章封面图模式
+        showCapture: false, // 是否在摘要位置显示文章部分文字，当为 true 且不使用 frontmatter.describe 和 <!-- more --> 时，会自动截取前 300 个字符作为摘要
+        splitSeparator: false, // 文章信息（作者、创建时间、分类、标签等信息）是否添加 | 分隔符
         transition: true, // 是否开启过渡动画
         transitionName: "tk-slide-fade", // 自定义过渡动画名称
         listStyleTitleTagPosition: "right", // 列表模式下的标题标签位置（postStyle 为 list）
         cardStyleTitleTagPosition: "left", // 卡片模式下的标题标签位置（postStyle 为 card）
-        defaultCoverImg: coverImgList, // 默认封面图地址，如果不设置封面图则使用默认封面图地址
+        defaultCoverImg: [], // 默认封面图地址，如果不设置封面图则使用默认封面图地址
     },
     page: {
         disabled: false, // 是否禁用
@@ -210,15 +191,15 @@ export const teekConfig = defineTeekConfig({
         circleSize: 100, // 头像大小
         color: "#ffffff", // 字体颜色
         // 状态，仅当 shape 为 circle 相关值时有效
-        // status: {
-        //     icon: "😪", // 状态图标
-        //     size: 24, // 图标大小
-        //     title: "困", // 鼠标悬停图标的提示语
-        // },
+        status: {
+            icon: "😪", // 状态图标
+            size: 24, // 图标大小
+            title: "困", // 鼠标悬停图标的提示语
+        },
     },
     // 精选文章卡片配置
     topArticle: {
-        enabled: false, // 是否启用精选文章卡片
+        enabled: true, // 是否启用精选文章卡片
         title: "🔥精选文章", // 卡片标题
         emptyLabel: "暂无精选文章", // 精选文章为空时的标签
         limit: 5, // 一页显示的数量
@@ -234,7 +215,7 @@ export const teekConfig = defineTeekConfig({
         homeTitle: "🗂️文章分类", // 卡片标题
         moreLabel: "更多 ...", // 查看更多分类标签
         emptyLabel: "暂无文章分类", // 分类为空时的标签
-        limit: 10, // 一页显示的数量
+        limit: 5, // 一页显示的数量
         autoPage: false, // 是否自动翻页
         pageSpeed: 4000, // 翻页间隔时间，单位：毫秒。autoPage 为 true 时生效
     },
@@ -243,7 +224,7 @@ export const teekConfig = defineTeekConfig({
         enabled: true, // 是否启用标签卡片
         path: "/tags", // 标签页访问地址
         pageTitle: "🏷️全部标签", // 标签页页卡片标题
-        homeTitle: "🏷️文章标签", // 卡片标题
+        homeTitle: "🏷️热门标签", // 卡片标题
         moreLabel: "更多 ...", //  查看更多分类标签
         emptyLabel: "暂无标签", // 标签为空时的标签
         limit: 21, // 一页显示的数量
@@ -295,7 +276,7 @@ export const teekConfig = defineTeekConfig({
             },
         ],
         // 自定义额外信息
-        // appendInfo: [{key: "index", label: "站点作者", value: "677"}],
+        appendInfo: [{key: "index", label: "站点作者", value: "677"}],
     },
     // 社交信息配置，通常为一个社交图标，点击后将会跳转到社交软件的个人主页
     // social: [
@@ -361,7 +342,7 @@ export const teekConfig = defineTeekConfig({
         enabled: true, // 是否启用单文章页 Banner
         showCategory: true, // 是否展示分类
         showTag: true, // 是否展示标签
-        defaultCoverImg: "/imag/bg1.png", // 默认封面图
+        defaultCoverImg: "", // 默认封面图
         defaultCoverBgColor: "", // 默认封面背景色，优先级低于 defaultCoverImg
     },
     // 文章信息分析配置，分别作用在首页和文章页
@@ -370,10 +351,10 @@ export const teekConfig = defineTeekConfig({
         dateFormat: "yyyy-MM-dd hh:mm:ss", // 文章日期格式，首页和文章页解析日期时使用
         showInfo: true, // 是否展示作者、日期、分类、标签、字数、阅读时长、浏览量等文章信息，分别作用于首页和文章页
         showAuthor: false, // 是否展示作者
-        showCreateDate: true, // 是否展示创建日期
+        showCreateDate: false, // 是否展示创建日期
         showUpdateDate: true, // 是否展示更新日期，仅在文章页显示
-        showCategory: true, // 是否展示分类
-        showTag: true, // 是否展示标签
+        showCategory: false, // 是否展示分类
+        showTag: false, // 是否展示标签
         // 将文章信息传送到指定位置，仅限在文章页生效，默认在文章页顶部
         // teleport: {
         //   selector: "h1",
@@ -384,7 +365,7 @@ export const teekConfig = defineTeekConfig({
     // 面包屑配置
     breadcrumb: {
         enabled: true, // 是否启用面包屑
-        showCurrentName: true, // 面包屑最后一列是否显示当前文章的文件名
+        showCurrentName: false, // 面包屑最后一列是否显示当前文章的文件名
         separator: "/", // 面包屑分隔符
         homeLabel: "首页", // 鼠标悬停首页图标的提示文案
     },
@@ -488,8 +469,28 @@ export const teekConfig = defineTeekConfig({
             recoverTransform: false, // 是否开启同名 key 覆盖
             categories: true, // 是否开启自动生成 categories
             coverImg: true, // 是否开启添加文档封面图
-            forceCoverImg: true, // 是否开启强制覆盖封面图
-            coverImgList: coverImgList, // 封面图列表
+            forceCoverImg: false, // 是否开启强制覆盖封面图
+            coverImgList: [
+                "/imag/03.jpeg",
+                "/imag/212.jpg",
+                "/imag/217.jpg",
+                "/imag/20240419212650171353321047190.jpg",
+                "/imag/20240419222653171353681350056.jpg",
+                "/imag/20250615222500174999750097579.jpg",
+                "/imag/bizhihui_com_20231110231604169962936498366.jpg",
+                "/imag/bizhihui_com_20231111134439169968147988241.jpg",
+                "/imag/bizhihui_com_20231111173104169969506477847.jpg",
+                "/imag/bizhihui_com_20231111173104169969506477847 (1).jpg",
+                "/imag/Italy - Dolomities 4K.jpg",
+                "/imag/PUBG PC aesthetic wallpapers 4K.png",
+                "/imag/wallhaven-yqxzqx.jpg",
+                "/imag/全力以赴 蜡笔小新 4k电脑壁纸_彼岸图网.jpg",
+                "/imag/加油，继续高清，good luck.jpg",
+                "/imag/小兰和柯南 黑色背景 4K电脑壁纸3840x2400.jpg",
+                "/imag/懒羊羊.png",
+                "/imag/比他们都高清，Higher definition than them.jpg",
+                "/imag/高清唯美山水风景，High-definition and beautiful m.png"
+            ], // 封面图列表
             // 处理永久链接的规则
             permalinkRules: [
                 //{ folderName: "01.指南/01.简介/", prefix: "/$path/$uuid", removeLevel: 99 }, // 添加前缀

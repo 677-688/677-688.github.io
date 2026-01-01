@@ -2,6 +2,7 @@
 import Teek from "vitepress-theme-teek";
 import ContributeChart from "./ContributeChart.vue";
 import NotFound from "./404.vue";
+import MyNoticeContent from "./MyNoticeContent.vue";
 
 </script>
 
@@ -14,6 +15,11 @@ import NotFound from "./404.vue";
     <template #not-found>
       <NotFound />
     </template>
+
+    <template #teek-notice-content>
+      <MyNoticeContent />
+    </template>
+
   </Teek.Layout>
 </template>
 

@@ -13,8 +13,6 @@ export const nav: DefaultTheme.Config['nav'] =
     [
         {text: "首页", link: "/"},
         {text: "清单", link: "/articleOverview"},
-        {text: "分类", link: "/categories"},
-        {text: "标签", link: "/tags"},
         {text: "归档", link: "/archives"},
     ]
 
