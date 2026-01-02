@@ -13,8 +13,8 @@ hero:
             text: 目录
             link: /文档
 #    image: {
-#        light: /icon/cat1.ico,
-#        dark: /icon/cat2.ico
+#        light: /icons/cat1.ico,
+#        dark: /icons/cat2.ico
 #    }
 
 #features:

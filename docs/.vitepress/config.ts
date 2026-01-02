@@ -23,7 +23,7 @@ export default defineConfig({
     head: [
         [
             "link",
-            {rel: "icon", type: "image/svg+xml", href: 'icon/cat1.ico'},
+            {rel: "icon", type: "image/svg+xml", href: 'icons/cat1.ico'},
         ],
         ["meta", {property: "og:type", content: "website"}],
         ["meta", {property: "og:locale", content: "zh-CN"}],
@@ -130,7 +130,7 @@ export default defineConfig({
          * 导航栏上显示的 Logo，位于站点标题前。
          * 可以接受一个路径字符串，或者一个对象来设置在浅色/深色模式下不同的 Logo。
          */
-        logo: {light: "/icon/cat1.ico", dark: "/icon/cat2.ico"},
+        logo: {light: "/icons/cat1.ico", dark: "/icons/cat2.ico"},
         /**
          * 可以自定义此项以替换导航中的默认站点标题 (应用配置中的 title)。
          * 当设置为 false 时，导航中的标题将被禁用。这在当 logo 已经包含站点标题文本时很有用。

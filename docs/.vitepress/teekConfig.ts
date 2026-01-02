@@ -1,25 +1,25 @@
 import {defineTeekConfig} from "vitepress-theme-teek/config";
 
 export const coverImgList = [
-    "/imag/03.jpeg",
-    "/imag/212.jpg",
-    "/imag/217.jpg",
-    "/imag/20240419212650171353321047190.jpg",
-    "/imag/20240419222653171353681350056.jpg",
-    "/imag/20250615222500174999750097579.jpg",
-    "/imag/bizhihui_com_20231110231604169962936498366.jpg",
-    "/imag/bizhihui_com_20231111134439169968147988241.jpg",
-    "/imag/bizhihui_com_20231111173104169969506477847.jpg",
-    "/imag/bizhihui_com_20231111173104169969506477847 (1).jpg",
-    "/imag/Italy - Dolomities 4K.jpg",
-    "/imag/PUBG PC aesthetic wallpapers 4K.png",
-    "/imag/wallhaven-yqxzqx.jpg",
-    "/imag/全力以赴 蜡笔小新 4k电脑壁纸_彼岸图网.jpg",
-    "/imag/加油，继续高清，good luck.jpg",
-    "/imag/小兰和柯南 黑色背景 4K电脑壁纸3840x2400.jpg",
-    "/imag/懒羊羊.png",
-    "/imag/比他们都高清，Higher definition than them.jpg",
-    "/imag/高清唯美山水风景，High-definition and beautiful m.png"
+    "/backgrounds/03.jpeg",
+    "/backgrounds/212.jpg",
+    "/backgrounds/217.jpg",
+    "/backgrounds/20240419212650171353321047190.jpg",
+    "/backgrounds/20240419222653171353681350056.jpg",
+    "/backgrounds/20250615222500174999750097579.jpg",
+    "/backgrounds/bizhihui_com_20231110231604169962936498366.jpg",
+    "/backgrounds/bizhihui_com_20231111134439169968147988241.jpg",
+    "/backgrounds/bizhihui_com_20231111173104169969506477847.jpg",
+    "/backgrounds/bizhihui_com_20231111173104169969506477847 (1).jpg",
+    "/backgrounds/Italy - Dolomities 4K.jpg",
+    "/backgrounds/PUBG PC aesthetic wallpapers 4K.png",
+    "/backgrounds/wallhaven-yqxzqx.jpg",
+    "/backgrounds/全力以赴 蜡笔小新 4k电脑壁纸_彼岸图网.jpg",
+    "/backgrounds/加油，继续高清，good luck.jpg",
+    "/backgrounds/小兰和柯南 黑色背景 4K电脑壁纸3840x2400.jpg",
+    "/backgrounds/懒羊羊.png",
+    "/backgrounds/比他们都高清，Higher definition than them.jpg",
+    "/backgrounds/高清唯美山水风景，High-definition and beautiful m.png"
 ]
 
 export const teekConfig = defineTeekConfig({
@@ -134,7 +134,7 @@ export const teekConfig = defineTeekConfig({
         name: " ", // Banner 标题，默认读取 vitepress 的 title 属性
         bgStyle: "fullImg", // Banner 背景风格：pure 为纯色背景，partImg 为局部图片背景，fullImg 为全屏图片背景
         pureBgColor: "#28282d", // Banner 背景色，bgStyle 为 pure 时生效
-        imgSrc: ["/imag/bg1.png", "/imag/bg2.png"], // Banner 图片链接。bgStyle 为 partImg 或 fullImg 时生效
+        imgSrc: ["/backgrounds/bg1.png", "/backgrounds/bg2.png"], // Banner 图片链接。bgStyle 为 partImg 或 fullImg 时生效
         imgInterval: 15000, // 当多张图片时（imgSrc 为数组），设置切换时间，单位：毫秒
         imgShuffle: false, // 图片是否随机切换，为 false 时按顺序切换，bgStyle 为 partImg 或 fullImg 时生效
         imgWaves: true, // 是否开启 Banner 图片波浪纹，bgStyle 为 fullImg 时生效
@@ -205,7 +205,7 @@ export const teekConfig = defineTeekConfig({
         slogan: "持续学习是成长的关键，不断记录和反思来提升自己！", // 博主签名
         avatar: "https://avatars.githubusercontent.com/u/58772133?v=4", // 博主头像
         shape: "circle-rotate-last", // 头像风格：square 为方形头像，circle 为圆形头像，circle-rotate 可支持鼠标悬停旋转，circle-rotate-last 将会持续旋转 59s
-        circleBgImg: "/imag/bg4.png", // 背景图片
+        circleBgImg: "/backgrounds/bg4.png", // 背景图片
         circleBgMask: true, // 遮罩层是否显示，仅当 shape 为 circle 且 circleBgImg 配置时有效
         circleSize: 100, // 头像大小
         color: "#ffffff", // 字体颜色
@@ -361,7 +361,7 @@ export const teekConfig = defineTeekConfig({
         enabled: true, // 是否启用单文章页 Banner
         showCategory: true, // 是否展示分类
         showTag: true, // 是否展示标签
-        defaultCoverImg: "/imag/bg1.png", // 默认封面图
+        defaultCoverImg: "/backgrounds/bg1.png", // 默认封面图
         defaultCoverBgColor: "", // 默认封面背景色，优先级低于 defaultCoverImg
     },
     // 文章信息分析配置，分别作用在首页和文章页

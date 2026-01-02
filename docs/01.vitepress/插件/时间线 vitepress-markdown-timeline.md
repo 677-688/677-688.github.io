@@ -6,7 +6,7 @@ categories:
   - 插件
 tags:
   - 插件
-coverImg: /imag/bizhihui_com_20231111134439169968147988241.jpg
+coverImg: /backgrounds/bizhihui_com_20231111134439169968147988241.jpg
 ---
 
 
